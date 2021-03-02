@@ -2,6 +2,8 @@
   --spacing: 0.3rem;
   --spacing-m: calc(var(--spacing) * 2);
   --spacing-l: calc(var(--spacing) * 3);
+  --spacing-xl: calc(var(--spacing) * 4);
+  --spacing-xxl: calc(var(--spacing) * 5);
   --active-color: #2802b0;
   --active-text-color: #fff;
   --error-color: #fc134b;
@@ -27,7 +29,6 @@
 .input {
   display: block;
   grid-area: input;
-  width: 100%;
   padding: var(--spacing-m);
   border: 2px solid var(--inactive-color);
   border-radius: var(--spacing);
@@ -64,6 +65,10 @@
 
 .error .input {
   border-color: var(--error-color);
+}
+
+.errorMessage {
+  font-size: .8rem;
 }
 
 /* Input Focus */

@@ -1,12 +1,11 @@
 <template>
   <Header />
 
-  <VeeValidateSimple />
+  <RouterView />
 </template>
 
 <script setup>
 import Header from './components/Header.vue'
-import VeeValidateSimple from './components/VeeValidateSimple.vue'
 import './assets/form.css'
 
 // This starter template is using Vue 3 experimental <script setup> SFCs
@@ -22,6 +21,6 @@ import './assets/form.css'
   color: #2c3e50;
   margin: 4rem auto;
 
-  max-width: 40rem;
+  max-width: 60rem;
 }
 </style>

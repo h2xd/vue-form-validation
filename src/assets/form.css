@@ -1,15 +1,3 @@
-:root {
-  --spacing: 0.3rem;
-  --spacing-m: calc(var(--spacing) * 2);
-  --spacing-l: calc(var(--spacing) * 3);
-  --spacing-xl: calc(var(--spacing) * 4);
-  --spacing-xxl: calc(var(--spacing) * 5);
-  --active-color: #2802b0;
-  --active-text-color: #fff;
-  --error-color: #fc134b;
-  --inactive-color: #a7a7a7;
-}
-
 .inputGrid {
   display: grid;
   grid-template-areas: 'label' 'input';

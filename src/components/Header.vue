@@ -1,21 +1,15 @@
 <template>
-  <h1>Hello Vuejs-Meetup@Hamburg</h1>
+  <h1 class="title">
+    <RouterLink to="/">Hello Vuejs-Meetup@Hamburg</RouterLink>
+  </h1>
 
 <!--  <button @click="state.count++">count is: {{ state.count }}</button>-->
 </template>
 
-<script setup>
-import { defineProps, reactive } from 'vue'
-
-// defineProps({
-//   msg: String
-// })
-
-// const state = reactive({ count: 0 })
-</script>
-
 <style scoped>
-a {
-  color: #42b983;
+.title {
+  padding-bottom: var(--spacing-xxl);
+  margin-bottom: var(--spacing-xxl);
+  border-bottom: 2px solid var(--active-color);
 }
 </style>

@@ -17,13 +17,8 @@
     </Form>
 
     <template #code>
-      <Prism language="html">
-        {{ codeTemplate }}
-      </Prism>
-
-      <Prism language="html">
-        {{ codeJavascript }}
-      </Prism>
+      <PrismNeo language="html" :code="codeTemplate" />
+      <PrismNeo language="html" :code="codeJavascript" />
     </template>
   </SourceGrid>
 </template>
@@ -32,6 +27,7 @@
 import { Field, Form, ErrorMessage } from 'vee-validate';
 import Prism from 'vue-prism-component'
 import SourceGrid from '../components/SourceGrid.vue'
+import PrismNeo from '../components/Prism.vue'
 
 const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 

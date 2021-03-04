@@ -21,9 +21,7 @@
     </form>
 
     <template #code>
-      <pre>
-        {{ v$.$errors }}
-      </pre>
+      <PrismNeo language="javascript" :code="v$" />
     </template>
   </SourceGrid>
 </template>
@@ -33,8 +31,8 @@ import { reactive, ref, computed, unref } from 'vue'
 import useVuelidate from '@vuelidate/core'
 import { required, email } from '@vuelidate/validators'
 
-import Prism from 'vue-prism-component'
 import SourceGrid from '../components/SourceGrid.vue'
+import PrismNeo from '../components/Prism.vue'
 
 const state = reactive({
   name: '',

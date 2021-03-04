@@ -17,7 +17,6 @@
 <script setup>
 import { PATH } from '../path'
 
-
 const navigation = [
   {
     to: PATH.VeeValidateComponent,

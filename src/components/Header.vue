@@ -1,9 +1,7 @@
 <template>
   <h1 class="title">
-    <RouterLink to="/">Hello Vuejs-Meetup@Hamburg</RouterLink>
+    <RouterLink to="/">Vue-Validations - Vuejs-Meetup@Hamburg ⚓ 🏰 ❤️</RouterLink>
   </h1>
-
-<!--  <button @click="state.count++">count is: {{ state.count }}</button>-->
 </template>
 
 <style scoped>

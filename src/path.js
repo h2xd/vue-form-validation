@@ -1,4 +1,5 @@
 export const PATH = {
-  VeeValidateComponent: '/vee-validate-component',
-  VuelidateSimple: '/vuelidate-simple'
+  VeeValidateComponent: '/vee-validate/component',
+  VeeValidatePassword: '/vee-validate/password',
+  VuelidateSimple: '/vuelidate/simple'
 }

@@ -23,6 +23,10 @@ const navigation = [
     title: 'VeeValidate Component',
   },
   {
+    to: PATH.VeeValidatePassword,
+    title: 'VeeValidate Password',
+  },
+  {
     to: PATH.VuelidateSimple,
     title: 'Vuelidate Simple',
   },

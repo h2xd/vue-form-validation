@@ -4,6 +4,7 @@ import { PATH } from "./path";
 const syncHomePage = () => import('./pages/home.vue');
 const syncVeeValidateComponentsPage = () => import('./pages/VeeValidateComponents.vue');
 const syncVeeValidatePasswordPage = () => import('./pages/VeeValidatePassword.vue');
+const syncVeeValidateCustomComponentPage = () => import('./pages/VeeValidateCustomComponent.vue');
 const syncVuelidateSimplePage = () => import('./pages/VuelidateSimple.vue');
 
 export const routerHistory = createWebHistory();
@@ -25,6 +26,11 @@ export const router = createRouter({
       path: PATH.VeeValidatePassword,
       name: 'VeeValidatePassword',
       component: syncVeeValidatePasswordPage,
+    },
+    {
+      path: PATH.VeeValidateCustomComponent,
+      name: 'VeeValidateCustomComponent',
+      component: syncVeeValidateCustomComponentPage,
     },
     {
       path: PATH.VuelidateSimple,

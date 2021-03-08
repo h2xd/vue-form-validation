@@ -1,19 +1,19 @@
 <template>
   <SourceGrid>
-    <form class="container" @submit.prevent="handleSubmit">
+    <form class="container" @submit.prevent="handleSubmit" autocomplete="off">
       <div :class="['inputGrid', v$.email.$error && 'error']">
         <input id="email" name="email" placeholder="you@vuejs.hamburg" class="input" v-model="state.email"  />
         <label for="email" class="label">E-Mail</label>
-        <div v-for="(error) of v$.email.$errors">
-          <div class="error">{{ error.$message }}</div>
+        <div v-for="(error, index) of v$.email.$errors" :key="`email-error-${index}`">
+          <div class="errorMessage">{{ error.$message }}</div>
         </div>
       </div>
 
       <div :class="['inputGrid', v$.name.$error && 'error']">
         <input id="name" name="name" placeholder="Name" class="input" v-model="state.name" />
         <label for="name" class="label">Name</label>
-        <div v-for="(error) of v$.name.$errors">
-          <div class="error">{{ error.$message }}</div>
+        <div v-for="(error, index) of v$.name.$errors" :key="`name-error-${index}`">
+          <div class="errorMessage">{{ error.$message }}</div>
         </div>
       </div>
 
@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import { reactive, ref, computed, unref } from 'vue'
+import { reactive, unref } from 'vue'
 import useVuelidate from '@vuelidate/core'
 import { required, email } from '@vuelidate/validators'
 

@@ -28,7 +28,6 @@
 
 <script setup>
 import { Field, Form, ErrorMessage } from 'vee-validate';
-import Prism from 'vue-prism-component'
 import SourceGrid from '../components/SourceGrid.vue'
 import PrismNeo from '../components/Prism.vue'
 

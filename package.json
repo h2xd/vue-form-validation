@@ -10,10 +10,8 @@
     "@vuelidate/core": "^2.0.0-alpha.14",
     "@vuelidate/validators": "^2.0.0-alpha.12",
     "prism-es6": "^1.2.0",
-    "prismjs": "^1.23.0",
     "vee-validate": "^4.1.19",
     "vue": "^3.0.5",
-    "vue-prism-component": "^2.0.0",
     "vue-router": "4"
   },
   "devDependencies": {

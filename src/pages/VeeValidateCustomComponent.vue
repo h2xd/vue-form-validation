@@ -6,6 +6,7 @@
         :key="`form-field-${index}`"
         :label="field.label"
         :name="field.target.name"
+        :placeholder="field.placeholder"
         :error-message="field.target.errorMessage.value"
         :value="field.target.value.value"
         v-model="field.target.value.value"
@@ -53,14 +54,17 @@ const password = useField('password', isRequired, { initialValue: '' })
 const fields = [
   {
     label: 'Name',
+    placeholder: 'Dein Name',
     target: name
   },
   {
     label: 'E-Mail',
+    placeholder: 'Deine E-Mail',
     target: email
   },
   {
     label: 'Passwort',
+    placeholder: 'Dein Passwort',
     target: password
   }
 ]

@@ -1,6 +1,6 @@
 <template>
   <div :class="['inputGrid', hasError && 'error']">
-    <input v-model="innerValue" v-bind="$attrs" :type="type" class="input" :id="name" name="password" placeholder="Your Password" />
+    <input v-model="innerValue" v-bind="$attrs" :type="type" class="input" :id="name" name="password" :placeholder="placeholder" />
     <label :for="name" class="label">{{ label }}</label>
     <div class="errorMessage" v-if="hasError">{{ errorMessage }}</div>
   </div>
@@ -38,8 +38,6 @@ export default defineComponent({
     }
   },
   setup(props, context) {
-    console.log(context)
-
     const hasError = computed(() => !!props.errorMessage)
     const innerValue = ref(props.value)
 

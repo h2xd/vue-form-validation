@@ -30,8 +30,8 @@ import './assets/form.css'
   --spacing-m: calc(var(--spacing) * 2);
   --spacing-l: calc(var(--spacing) * 3);
   --spacing-xl: calc(var(--spacing) * 4);
-  --spacing-xxl: calc(var(--spacing) * 5);
-  --link-color: #3618e3;
+  --spacing-xxl: calc(var(--spacing) * 10);
+  --link-color: #3143e2;
   --active-color: #2802b0;
   --active-text-color: #fff;
   --error-color: #fc134b;

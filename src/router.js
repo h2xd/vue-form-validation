@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import { PATH } from "./path";
 
 const syncHomePage = () => import('./pages/home.vue');
@@ -8,7 +8,7 @@ const syncVeeValidateCustomComponentPage = () => import('./pages/VeeValidateCust
 const syncVuelidateSimplePage = () => import('./pages/VuelidateSimple.vue');
 const syncVuelidateCustomComponentPage = () => import('./pages/VuelidateCustomComponent.vue');
 
-export const routerHistory = createWebHistory();
+export const routerHistory = createWebHashHistory();
 
 export const router = createRouter({
   history: routerHistory,

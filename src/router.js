@@ -2,9 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router';
 import { PATH } from "./path";
 
 const syncHomePage = () => import('./pages/home.vue');
-const syncVeeValidateComponentsPage = () => import('./pages/vee-validate-components.vue');
-const syncVeeValidatePasswordPage = () => import('./pages/vee-validate-password.vue');
-const syncVuelidateSimplePage = () => import('./pages/vuelidate-simple.vue');
+const syncVeeValidateComponentsPage = () => import('./pages/VeeValidateComponents.vue');
+const syncVeeValidatePasswordPage = () => import('./pages/VeeValidatePassword.vue');
+const syncVuelidateSimplePage = () => import('./pages/VuelidateSimple.vue');
 
 export const routerHistory = createWebHistory();
 

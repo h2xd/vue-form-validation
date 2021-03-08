@@ -1,6 +1,7 @@
 <template>
-  <SourceGrid>
-    <Form v-slot="{ errors }" class="container">
+  <Form v-slot="{ errors, ...rest }" class="container">
+   <SourceGrid>
+
       <div :class="['inputGrid', errors.email && 'error']">
         <Field id="email" name="email" placeholder="you@vuejs.hamburg" class="input" :rules="isEmail"  />
         <label for="email" class="label">E-Mail</label>
@@ -14,13 +15,15 @@
       </div>
 
       <button type="submit" class="submit">Send!</button>
-    </Form>
 
-    <template #code>
-      <PrismNeo language="html" :code="codeTemplate" />
-      <PrismNeo language="html" :code="codeJavascript" />
-    </template>
-  </SourceGrid>
+
+      <template #code>
+        <PrismNeo language="javascript" :code="{ errors, ...rest }" />
+        <PrismNeo language="html" :code="codeTemplate" />
+        <PrismNeo language="html" :code="codeJavascript" />
+      </template>
+    </SourceGrid>
+  </Form>
 </template>
 
 <script setup>

@@ -1,21 +1,16 @@
 <template>
   <SourceGrid>
     <form class="container" @submit.prevent="handleSubmit" autocomplete="off">
-      <div :class="['inputGrid', v$.email.$error && 'error']">
-        <input id="email" name="email" placeholder="you@vuejs.hamburg" class="input" v-model="state.email"  />
-        <label for="email" class="label">E-Mail</label>
-        <div v-for="(error, index) of v$.email.$errors" :key="`email-error-${index}`">
-          <div class="errorMessage">{{ error.$message }}</div>
-        </div>
-      </div>
-
-      <div :class="['inputGrid', v$.name.$error && 'error']">
-        <input id="name" name="name" placeholder="Name" class="input" v-model="state.name" />
-        <label for="name" class="label">Name</label>
-        <div v-for="(error, index) of v$.name.$errors" :key="`name-error-${index}`">
-          <div class="errorMessage">{{ error.$message }}</div>
-        </div>
-      </div>
+      <Input
+        v-for="(field, index) in fields"
+        :key="`form-field-${index}`"
+        :label="field.label"
+        :name="field.target.$path"
+        :placeholder="field.placeholder"
+        :error-message="field.target.$errors.length > 0 ? field.target.$errors[0].$message : ''"
+        :value="field.target.$model"
+        v-model="field.target.$model"
+      />
 
       <button type="submit" class="submit">Send!</button>
     </form>
@@ -31,22 +26,44 @@ import { reactive, unref } from 'vue'
 import useVuelidate from '@vuelidate/core'
 import { required, email } from '@vuelidate/validators'
 
+import Input from '../components/Input.vue'
 import SourceGrid from '../components/SourceGrid.vue'
 import PrismNeo from '../components/Prism.vue'
 
 const state = reactive({
   name: '',
   email: '',
+  password: '',
 })
 
 const rules = {
   name: { required },
   email: { required, email },
+  password: { required },
 }
 
 const v$ = useVuelidate(rules, state)
 
+const fields = [
+  {
+    label: 'Name',
+    placeholder: 'Dein Name',
+    target: v$.value.name
+  },
+  {
+    label: 'E-Mail',
+    placeholder: 'Deine E-Mail',
+    target: v$.value.email
+  },
+  {
+    label: 'Passwort',
+    placeholder: 'Dein Passwort',
+    target: v$.value.password
+  }
+]
+
 function handleSubmit() {
+  console.log(v$)
 
   unref(v$).$touch()
   if(v$.$error) return

@@ -34,6 +34,10 @@ const navigation = [
     to: PATH.VuelidateSimple,
     title: 'Vuelidate Simple',
   },
+  {
+    to: PATH.VuelidateCustomComponent,
+    title: 'Vuelidate Custom Component',
+  },
 ]
 </script>
 

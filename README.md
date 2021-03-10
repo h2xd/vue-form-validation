@@ -5,7 +5,7 @@ https://www.youtube.com/watch?v=fVxRkpWq2QI
 
 Special thanks goes to:
  - [@neohcs](https://github.com/neohcs) - Providing support and great ideas!
- - [sum.cumo](https://sumcumo.com/) - Make this talk possible!
+ - [sum.cumo](https://sumcumo.com/) - Making this talk possible!
 
 Feel free to ask questions, or request other examples :)
 
